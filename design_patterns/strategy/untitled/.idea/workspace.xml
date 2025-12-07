@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="603c3411-26ca-4499-bc00-0907d686702e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../kafka/tp 1/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/../../../kafka/tp 1/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../kafka/tp 1/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../kafka/tp 1/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../kafka/tp 1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../kafka/tp 1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../kafka/tp 1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../kafka/tp 1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../kafka/tp 1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../kafka/tp 1/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../kafka/tp 1/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../kafka/tp 1/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../kafka/tp 1/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../kafka/tp 1/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="33WshAxM6tWaQbFdr2vBuIQoncX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculateurIGRFactoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EmployeTest.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/mountassir/Downloads/youssfi/design_patterns/strategy/untitled/src/main/java/org/example/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CalculateurIGRFactoryTest">
+    <configuration name="CalculateurIGRFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.CalculateurIGRFactoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmployeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.EmployeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CalculateurIGRFactoryTest" />
+        <item itemvalue="JUnit.EmployeTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="603c3411-26ca-4499-bc00-0907d686702e" name="Changes" comment="" />
+      <created>1759444281346</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1759444281346</updated>
+    </task>
+    <servers />
+  </component>
+</project>

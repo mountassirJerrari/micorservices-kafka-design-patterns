@@ -1,0 +1,120 @@
+version: '3.8'
+
+services:
+  # Eureka Discovery Service
+  discovery-service:
+    build:
+      context: .
+      dockerfile: discovery/Dockerfile
+    container_name: discovery-service
+    ports:
+      - "8761:8761"
+    networks:
+      - stock-market-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8761/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # API Gateway
+  gateway-service:
+    build:
+      context: .
+      dockerfile: gatway/Dockerfile
+    container_name: gateway-service
+    ports:
+      - "8080:8080"
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://discovery-service:8761/eureka/
+    networks:
+      - stock-market-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # Company Service
+  company-service:
+    build:
+      context: .
+      dockerfile: company-service/Dockerfile
+    container_name: company-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://discovery-service:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:h2:mem:companydb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      - SPRING_H2_CONSOLE_ENABLED=true
+      - SPRING_H2_CONSOLE_PATH=/h2-console
+    networks:
+      - stock-market-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # Stock Service
+  stock-service:
+    build:
+      context: .
+      dockerfile: stock-service/Dockerfile
+    container_name: stock-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+      company-service:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://discovery-service:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:h2:mem:stockdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      - SPRING_H2_CONSOLE_ENABLED=true
+      - SPRING_H2_CONSOLE_PATH=/h2-console
+      - COMPANY_SERVICE_URL=http://company-service:8081
+    networks:
+      - stock-market-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8082/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # Frontend (React in development mode)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: stock-market-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - REACT_APP_API_URL=http://localhost:8080
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - stock-market-network
+    stdin_open: true
+    tty: true
+
+networks:
+  stock-market-network:
+    driver: bridge
