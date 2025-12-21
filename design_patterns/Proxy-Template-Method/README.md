@@ -1,4 +1,4 @@
-# Rapport sur les Patrons de Conception : Proxy et Template Method
+# Rapport : Proxy et Template Method
 
 **Auteur :** Mountassir Jerrari
 
