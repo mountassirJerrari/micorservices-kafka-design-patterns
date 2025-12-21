@@ -6,6 +6,7 @@ La Programmation Orientée Aspect (AOP) permet de modulariser les préoccupation
 
 ### AspectJ : L'AOP Statique (et Load-Time)
 ![alt text](image.png)
+
 AspectJ est une extension du langage Java qui offre une implémentation complète de l'AOP. 
 - **Tissage (Weaving)** : Il utilise principalement le tissage statique (au moment de la compilation ou post-compilation) ou le tissage au chargement des classes (Load-Time Weaving).
 - **Performance** : Comme le code de l'aspect est injecté directement dans le bytecode, il n'y a pas de surcoût lié à l'exécution de proxies.
@@ -14,6 +15,7 @@ AspectJ est une extension du langage Java qui offre une implémentation complèt
 ### Spring AOP : L'AOP Dynamique
 
 ![alt text](image-1.png)
+
 Spring AOP est basé sur des **Proxies Dynamiques**.
 - **Tissage** : Le tissage se fait au moment de l'exécution (Runtime). Spring crée un objet proxy qui enveloppe l'objet cible.
 - **Limitations** : Il ne peut intercepter que les appels de méthodes publiques sur des beans gérés par le conteneur Spring. Il ne peut pas intercepter les appels internes (auto-invocation).
