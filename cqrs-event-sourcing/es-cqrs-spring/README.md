@@ -36,6 +36,7 @@ PostgreSQL est utilisé pour le **Read Model**. Les données y sont stockées so
 | `POST` | `/commands/accounts/add` | Création d'un nouveau compte bancaire. |
 | `POST` | `/commands/accounts/credit` | Créditer un montant sur un compte existant. |
 | `GET` | `/commands/accounts/events/{id}` | Consulter l'historique brut des événements pour un compte. |
+
 ![alt text](image.png)
 ### Requêtes (Lecture)
 | Méthode | Endpoint | Description |
